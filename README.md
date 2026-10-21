@@ -7,7 +7,9 @@ A **Telegram bot** designed for quick security testing of WiFi networks by **bru
 > [!WARNING]
 > This tool is intended for authorized security auditing and educational purposes only. Always obtain explicit permission before testing networks you do not own.
 
----
+## Example of dialog with the bot
+
+# <img src="https://github.com/apristen/tg-bot-wpa2/blob/main/example_01.png" alt="Example of dialog with the bot">
 
 ## Run How-To
 
