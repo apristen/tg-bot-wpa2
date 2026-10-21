@@ -1,0 +1,20 @@
+services:
+  tgbot-hashcat:
+    build:
+      context: .
+      network: host  # Uses host's DNS and network during the build stage
+    container_name: tg_hashcat_app
+    restart: unless-stopped
+    network_mode: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - /home/user/Dic:/app/wordlists:ro
+      - ./hashcat_data:/root/.local/share/hashcat:rw
+    env_file:
+      - .env
